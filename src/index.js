@@ -5,10 +5,15 @@
  * @returns number of weeks needed for finish education
  */
 module.exports = function getTimeForEducation(
-    focus = 'family', 
+    focus = ['family', 'friends', 'normal_life', 'profession',
+            'carrier', 'top_perfomance'], 
     knowsProgramming = true,
-    config = {family: 4}
+    config = {family: 4, friends: 10, normal_life: 20, profession: 30,
+              carrier: 40, top_perfomance: 60}
     ) {
-      return 0;
-  };
-  
+      let hours = {
+        true: 800, 
+      }
+    return (hours[knowsProgramming] / config[focus]);
+    {
+  };}
